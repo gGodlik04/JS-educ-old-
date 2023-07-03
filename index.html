@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Программирование на JavaScript </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script src="1st_work.js"></script>
+    <script src="2nd_work.js"></script>
+    <script src="3rd_work.js"></script>
+</head>
+<body>
+    <style>
+        img{
+            width: 400px;
+            height: 250px;
+        }
+    </style>
+    <script>
+
+        $(document).ready(function(){
+            $('#1st').click(function(e){
+                let img= $('img[src="images/1.jpeg"]');
+                $(img).animate({
+                    'opacity':0
+                }, 3500)
+                e.target.remove();
+            })
+            $('#2nd').click(function(e){
+                let img= $('img[src="images/2.jpeg"]');
+                $(img).animate({
+                    'opacity':0
+                }, 3500)
+                e.target.remove();
+            })
+            $('#3rd').click(function(e){
+                let img= $('img[src="images/3.jpeg"]');
+                $(img).animate({
+                    'opacity':0
+                }, 3500)
+                e.target.remove();
+            })
+        })
+    </script>
+    <img src="images/1.jpeg" alt="">
+    <button id="1st">Удалить</button>
+    <img src="images/2.jpeg" alt="">
+    <button id="2nd">Удалить</button>
+    <img src="images/3.jpeg" alt="">
+    <button id="3rd">Удалить</button>
+</body>
+</html>
